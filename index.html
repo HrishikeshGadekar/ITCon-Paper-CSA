@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/pXYRd64r/CSAIcon.png" /> -->
+        <!-- faivcon -->
+        <!-- <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff"> -->
+        <!--  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+            rel="stylesheet">
+        <title>ML Safety</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap"
+            rel="stylesheet">
+        <!-- <link rel="stylesheet" type="text/css" href="csa.css"> -->
+
+        <!--  -->
+        <!--  -->
+
+        <style>
+            html,
+            body {
+                /* font-family: "Bitter", serif; */
+                /* font-family: "Noto Sans", sans-serif; */
+                /* font-family: "Libre Baskerville", serif; */
+                font-family: "Source Sans Pro", sans-serif;
+                /* background-color: #fefae0; */
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            .home-b {
+                font-weight: 700;
+            }
+
+            .lead {
+                font-weight: 400;
+                font-size: 1.1rem;
+            }
+
+            .head-title {
+                color: antiquewhite;
+                background-color: #a52a2a;
+                font-family: "IBM Plex Mono", monospace;
+                font-weight: 500;
+                margin: auto;
+                text-align: center;
+                border-left: 4px solid gray;
+                border-right: 4px solid gray;
+                border-radius: 0 0 0.5em 0.5em;
+            }
+
+            /* Nvaigation bar */
+            .navbar {
+                padding: 0.5em 0;
+                background-color: aliceblue;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+                position: sticky !important;
+            }
+
+            .nav-item {
+                margin: 0 2em;
+                color: #a52a2a;
+            }
+
+            .navbar-expand-lg .navbar-collapse {
+                /* display: flex !important; */
+                justify-content: space-around;
+                flex-basis: auto;
+            }
+
+            /* Main Content */
+
+            /* .Main-content {
+  background-color: white;
+} */
+
+            .navg .row {
+                font-size: 0.9rem;
+            }
+
+            dt a {
+                text-decoration: none;
+                color: #a52a2a;
+            }
+
+            .small-headers {
+                font-weight: 700;
+            }
+
+            .padc {
+                padding: 0.75em 1em;
+            }
+
+            /* Footer */
+            footer {
+                margin-top: auto;
+            }
+
+            .foot {
+                background-color: #573b38;
+                justify-content: space-evenly;
+                flex-basis: auto;
+            }
+
+            .foot .row .col-3 a {
+                text-decoration: none;
+                color: #bba9a8;
+            }
+
+            .foot .row .col-3 {
+                text-align: center;
+            }
+
+            /* Demo */
+            .demoform {
+                padding: 2rem;
+                border-radius: 2em;
+                background-color: #bba9a869;
+                width: 90%;
+                margin: auto;
+            }
+
+            .demoform input[type="submit"] {
+                background-color: #a52a2a;
+                color: antiquewhite;
+                border: none;
+            }
+
+            .demoform input[type="submit"]:hover {
+                background-color: #573b38;
+                color: #bba9a8;
+                border: none;
+            }
+
+            .form-label {
+                font-size: 1.25rem;
+            }
+
+            .demopred {
+                text-align: center;
+            }
+
+            /* Contact */
+            .contactd {
+                text-align: center;
+                margin: auto 0;
+            }
+
+            .contactd a {
+                text-decoration: none;
+                color: black;
+                margin: 0;
+            }
+
+            .material-symbols-outlined {
+                margin: 0;
+            }
+
+            .toc {
+                width: 60%;
+                border-bottom: 1px solid rgba(211, 211, 211, 0.638);
+                padding-bottom: 0.2em;
+            }
+
+            .toc-item a {
+                text-decoration: none;
+                color: #573b38;
+            }
+
+            .figc {
+                color: #573b38;
+                font-style: italic;
+                font-weight: 700;
+                font-size: 0.95rem;
+                margin: auto 0;
+            }
+
+            .scroll-top {
+                width: 75px;
+                height: 75px;
+                position: fixed;
+                bottom: 25px;
+                left: 20px;
+                display: none;
+            }
+
+            .scroll-top i {
+                display: inline-block;
+                color: #fff;
+            }
+
+            ::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                background-color: rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+
+            /* Media Queries */
+            @media (min-width: 300px) {
+                .head-title {
+                    font-size: 1rem;
+                }
+
+                .demoform {
+                    width: 90%;
+                }
+            }
+
+            @media (min-width: 600px) {
+                .head-title {
+                    font-size: 1.25rem;
+                }
+
+                .demoform {
+                    width: 80%;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .head-title {
+                    font-size: 2.5rem;
+                }
+
+                .demoform {
+                    width: 70%;
+                }
+            }
+        </style>
+
+
+        <!--  -->
+        <!--  -->
+
+    </head>
+
+
+    <body>
+        <!-- <header> -->
+        <div class="container">
+            <h1 class="head-title display-8 shadow p-3 mb-15">Machine Learning based automated
+                classification of
+                worker-reported safety reports in
+                construction</h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-toggler sticky-top">
+
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav center-text">
+                        <a class="nav-item nav-link active" href="index">Home</a>
+                        <a class="nav-item nav-link" href="algorithms">Algorithms</a>
+                        <a class="nav-item nav-link" href="demo">Demo</a>
+                        <a class="nav-item nav-link" href="contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- </header> -->
+
+        <!-- Main -->
+        <main class="Main-content">
+
+
+            <div class="container">
+                <div class="row align-items:start ">
+                    <div class="col-md-4 padc navg">
+                        <h4 class="sh">Navigation Help</h4>
+                        <br>
+                        <!--  -->
+                        <dl class="row">
+                            <dt class="col-sm-3"><a href="algorithms">Algorithms</a></dt>
+                            <dd class="col-sm-9">A discussion around all the Algorithms used and the Hyperparameter
+                                tuning performed.
+                            </dd>
+
+                            <dt class="col-sm-3"><a href="demo">Demo</a></dt>
+                            <dd class="col-sm-9">
+                                Try our ML tool to classify any Construction Safety Observation (SO).
+
+                            </dd>
+
+                            <dt class="col-sm-3"><a href="contact">Contact</a></dt>
+                            <dd class="col-sm-9">Feel free to reach out to us for any feedback or queries.
+                            </dd>
+
+
+                        </dl>
+
+                        <!--  -->
+                    </div>
+
+                    <div class="col-md-8 padc">
+
+                        <h4 class="sh">Details of the Paper</h4>
+                        <hr>
+                        <p>
+                            <span class="home-b">Authors:</span> Nikhil Bugalia, Vurukuti Tarani, Jai Kedia,
+                            Hrishikesh
+                            Gadekar
+                        </p>
+
+                        <p>
+                            <span class="home-b">Abstract:</span> The applicability of Machine Learning (ML)
+                            techniques
+                            for
+                            analyzing worker-reported near-miss
+                            safety reports at construction sites has received limited academic attention.
+                            Although
+                            resource-efficient analysis
+                            through ML for large volumes of such data at construction sites can help guide
+                            practitioners
+                            in
+                            decision-making
+                            to prevent injuries. The current study addresses this research gap by evaluating the
+                            relevance
+                            of ML
+                            approaches
+                            through quantitative and qualitative approaches for scaling efficient near-miss
+                            reporting
+                            programs
+                            at
+                            construction sites. Through an extensive experimentation strategy consisting of
+                            input data
+                            processing, n-gram
+                            modeling, and sensitivity analysis, the study first tests the proposition that,
+                            despite the
+                            data-quality challenges,
+                            the high performance of different ML algorithms can be achieved in automatically
+                            classifying
+                            the
+                            textual near-miss observations. The study relies on worker-reported near-miss data
+                            collected
+                            from
+                            a real construction site in
+                            Kuwait. The classification performance of various ML techniques is evaluated using
+                            F1 scores
+                            for
+                            three
+                            academically novel but commonly used categories labels at the sites - "Unsafe Act
+                            (UA),"
+                            "Unsafe
+                            Condition
+                            (UC)," and "Good Observation (GO)." In addition, the practitioner's input was
+                            utilized to
+                            assess
+                            the
+                            practical
+                            applicability of ML classifiers for construction sites. The conventional Logistic
+                            Regression
+                            (LR)
+                            classifiers have
+                            a comparative high F1 score of 0.79. However, ML classifiers faced challenges in
+                            distinguishing
+                            between UA
+                            and UC. Further, the analysis reveals that optimal ML classifiers may lose on being
+                            acceptable
+                            to
+                            human
+                            decision-makers. Overall, despite the promising performance of ML tools for the
+                            near-miss
+                            data,
+                            the
+                            sites with
+                            low maturity of reporting systems may find themselves unable to leverage ML to scale
+                            their
+                            reporting
+                            systems. A
+                            simplified experimentation strategy like the current study could help practitioners
+                            identify
+                            the
+                            data-specific
+                            optimal ML techniques in future applications.
+                        </p>
+                        <p>
+                            <span class="home-b">Keywords:</span><i> Automated construction; Machine Learning;
+                                Construction;
+                                Safety; Near-Miss Reporting;
+                                Neural Networks; n-grams.</i>
+
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="container foot">
+                <div class="row">
+                    <div class="col-3">
+                        <a href="index">Home</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="algorithms">Algorithms</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="demo">Demo</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="contact">Contact</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+    </body>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+
+</html>

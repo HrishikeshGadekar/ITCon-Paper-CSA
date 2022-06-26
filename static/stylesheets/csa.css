@@ -1,0 +1,205 @@
+html,
+body {
+  /* font-family: "Bitter", serif; */
+  /* font-family: "Noto Sans", sans-serif; */
+  /* font-family: "Libre Baskerville", serif; */
+  font-family: "Source Sans Pro", sans-serif;
+  /* background-color: #fefae0; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  text-align: justify;
+}
+
+.home-b {
+  font-weight: 700;
+}
+
+.lead {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.head-title {
+  color: antiquewhite;
+  background-color: #a52a2a;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+  border-left: 4px solid gray;
+  border-right: 4px solid gray;
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+/* Nvaigation bar */
+.navbar {
+  padding: 0.5em 0;
+  background-color: aliceblue;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  position: sticky !important;
+}
+
+.nav-item {
+  margin: 0 2em;
+  color: #a52a2a;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  /* display: flex !important; */
+  justify-content: space-around;
+  flex-basis: auto;
+}
+
+/* Main Content */
+
+/* .Main-content {
+  background-color: white;
+} */
+
+.navg .row {
+  font-size: 0.9rem;
+}
+
+dt a {
+  text-decoration: none;
+  color: #a52a2a;
+}
+
+.small-headers {
+  font-weight: 700;
+}
+
+.padc {
+  padding: 0.75em 1em;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+}
+
+.foot {
+  background-color: #573b38;
+  justify-content: space-evenly;
+  flex-basis: auto;
+}
+
+.foot .row .col-3 a {
+  text-decoration: none;
+  color: #bba9a8;
+}
+
+.foot .row .col-3 {
+  text-align: center;
+}
+
+/* Demo */
+.demoform {
+  padding: 2rem;
+  border-radius: 2em;
+  background-color: #bba9a869;
+  width: 90%;
+  margin: auto;
+}
+
+.demoform button {
+  background-color: #a52a2a;
+  color: antiquewhite;
+  border: none;
+}
+
+.demoform button:hover {
+  background-color: #573b38;
+  color: #bba9a8;
+  border: none;
+}
+
+.form-label {
+  font-size: 1.25rem;
+}
+
+.demopred {
+  text-align: center;
+}
+
+/* Contact */
+.contactd {
+  text-align: center;
+  margin: auto 0;
+}
+
+.contactd a {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+
+.material-symbols-outlined {
+  margin: 0;
+}
+
+.toc {
+  width: 60%;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.638);
+  padding-bottom: 0.2em;
+}
+
+.toc-item a {
+  text-decoration: none;
+  color: #573b38;
+}
+
+.figc {
+  color: #573b38;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: auto 0;
+}
+
+.scroll-top {
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  bottom: 25px;
+  left: 20px;
+  display: none;
+}
+.scroll-top i {
+  display: inline-block;
+  color: #fff;
+}
+
+/* Media Queries */
+@media (min-width: 300px) {
+  .head-title {
+    font-size: 1rem;
+  }
+
+  .demoform {
+    width: 90%;
+  }
+}
+
+@media (min-width: 600px) {
+  .head-title {
+    font-size: 1.25rem;
+  }
+  .demoform {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .head-title {
+    font-size: 2.5rem;
+  }
+  .demoform {
+    width: 70%;
+  }
+}

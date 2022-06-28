@@ -247,6 +247,15 @@
                 color: inherit;
             }
 
+            figcaption .cc {
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.70em;
+                font-style: normal;
+                font-weight: 400;
+                color: lightgrey;
+            }
+
             /* Media Queries */
             @media (min-width: 300px) {
                 .head-title {
@@ -319,7 +328,11 @@
         <!-- </header> -->
 
         <!-- Main -->
+
         <div class="container">
+            <br>
+            <h2 class="sh" style="text-align:center; font-weight:300;">Algorithms & Sensitivity Analysis</h2>
+            <br>
             <p class="lead">
                 In this study, experiments were conducted to identify the best performing classifier for the data used
                 in the current
@@ -388,12 +401,14 @@
                     </div>
                     <div class="col-md-4">
                         <figure>
-                            <img src="https://i.postimg.cc/VNrMdRL3/SVM.jpg" alt="SVM Hyperplanes" class="img-fluid">
+                            <img src="https://freesvg.org/img/svm1.png" alt="SVM Hyperplanes" class="img-fluid">
                             <figcaption class="figc"> Visualisation of LSVM classifier<br> <span
                                     class="img_source">(Source:
-                                    <a href="https://www.javatpoint.com/machine-learning-support-vector-machine-algorithm"
-                                        target="blank">
-                                        https://www.javatpoint.com/machine-learning-support-vector-machine-algorithm</a>)</span>
+                                    <a href="https://freesvg.org/img/svm1.png" target="blank">
+                                        https://freesvg.org/img/svm1.png</a>)</span><br>
+                                <span class="cc">NOTE: This image is taken from the above source and used under the
+                                    Creative
+                                    Commons License.</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -416,7 +431,7 @@
             <div class="algo">
                 <h3 class="sh"><b>2. Logistic Regression (LR)</b></h3>
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                         <p>
                             In machine learning, this classifier has significant importance and is a go-to algorithm for
                             binary classification tasks. This classifier uses a sigmoid function shown in the figure
@@ -441,21 +456,27 @@
 
                         </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <figure>
-                            <img src="https://i.postimg.cc/tJ0zXc3S/LR.png" alt="LR Sensitivity Results"
-                                class="img-fluid">
+                            <a title="Benwing, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:Logistic-sigmoid-vs-scaled-probit.svg"><img
+                                    width="512" alt="Logistic-sigmoid-vs-scaled-probit"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Logistic-sigmoid-vs-scaled-probit.svg/512px-Logistic-sigmoid-vs-scaled-probit.svg.png"></a>
                             <figcaption class="figc"> Visualisation of LR classifier<br> <span
                                     class="img_source">(Source:
-                                    <a href="https://www.kaggle.com/code/colearninglounge/in-depth-model-building-and-training-with-ml-clas/notebook"
+                                    <a href="https://commons.wikimedia.org/wiki/File:Logistic-sigmoid-vs-scaled-probit.svg"
                                         target="blank">
-                                        https://www.kaggle.com/code/colearninglounge/in-depth-model-building-and-training-with-ml-clas/notebook</a>)</span>
+                                        https://commons.wikimedia.org/wiki/File:Logistic-sigmoid-vs-scaled-probit.svg</a>)</span><br>
+                                <span class="cc">NOTE: This image is taken from the above source and used under the
+                                    Creative
+                                    Commons License.</span>
                             </figcaption>
                         </figure>
                     </div>
 
                 </div>
                 <div class="container">
+                    <h5 class="sh"><b>2.1 LR Parametric Sensitivity Analysis Results: </b></h5>
                     Here 'solver' is the parameter used in optimizing the results. The effect of using different solvers
                     is shown below.
                     <figure>
@@ -511,19 +532,15 @@
 
                     <div class="col-md-6">
                         <figure>
-                            <img src="https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png"
-                                alt="LR Sensitivity Results" class="img-fluid">
-                            <figcaption class="figc"> Visualisation of BNB classifier<br> <span
-                                    class="img_source">(Source:
-                                    <a href="https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png"
-                                        target="blank">
-                                        https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png</a>)</span>
+                            <img src="https://i.postimg.cc/02N5jZKy/BNB.jpg" alt="BNB Visualization" class="img-fluid">
+                            <figcaption class="figc"> Visualisation of BNB classifier
                             </figcaption>
                         </figure>
                     </div>
 
                 </div>
                 <div class="container">
+                    <h5 class="sh"><b>3.1 BNB Parametric Sensitivity Analysis Results: </b></h5>
                     Both training data accuracy and testing data accuracy across all the
                     categories are shown below.
                     <figure>
@@ -582,18 +599,15 @@
 
                     <div class="col-md-6">
                         <figure>
-                            <img src="https://miro.medium.com/max/1400/1*qF971AQ6ej-24X76hWjvgQ.png"
-                                alt="Visualisation of MNB classifier" class="img-fluid">
-                            <figcaption class="figc"> Visualisation of MNB classifier<br> <span
-                                    class="img_source">(Source:
-                                    <a href="https://towardsdatascience.com/multinomial-na%C3%AFve-bayes-for-documents-classification-and-natural-language-processing-nlp-e08cc848ce6"
-                                        target="blank">
-                                        https://towardsdatascience.com/multinomial-na%C3%AFve-bayes-for-documents-classification-and-natural-language-processing-nlp-e08cc848ce6</a>)</span>
+                            <img src="https://i.postimg.cc/SRbrVVH0/MNB.jpg" alt="Visualisation of MNB classifier"
+                                class="img-fluid">
+                            <figcaption class="figc"> Visualisation of MNB classifier
                             </figcaption>
                         </figure>
                     </div>
                 </div>
                 <div class="container">
+                    <h5 class="sh"><b>4.1 MNB Parametric Sensitivity Analysis Results: </b></h5>
                     From the results of the analysis shown below, the alpha value is changed to "0.2".
                     <figure>
                         <img src="https://i.postimg.cc/wMhQ3kF6/MNB-Alpha-Sensitivity-Results.jpg"
@@ -648,12 +662,25 @@
                     <div class="col-md-6">
 
                         <figure>
-                            <img src="https://www.researchgate.net/profile/Mohammad-Uddin-42/publication/334232648/figure/fig2/AS:803642831560706@1568614790960/Working-principle-of-random-forest-classifierC.ppm"
+                            <!-- <img src="https://www.researchgate.net/profile/Mohammad-Uddin-42/publication/334232648/figure/fig2/AS:803642831560706@1568614790960/Working-principle-of-random-forest-classifierC.ppm"
                                 alt="RF Visualization" class="img-fluid">
                             <figcaption class="figc"> Visualisation of Random forest classifier <br> <span
                                     class="img_source">(Source:
                                     <a href="https://doi.org/10.1007/978-981-13-7564-4_36" target="blank">
                                         https://doi.org/10.1007/978-981-13-7564-4_36</a>)</span>
+                            </figcaption> -->
+                            <a title="Venkata Jagannath, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:Random_forest_diagram_complete.png"
+                                target="blank"><img width="512" alt="Random forest diagram complete"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/76/Random_forest_diagram_complete.png"></a>
+                            <figcaption class="figc"> Visualisation of Random forest classifier <br> <span
+                                    class="img_source">(Source:
+                                    <a href="https://commons.wikimedia.org/wiki/File:Random_forest_diagram_complete.png"
+                                        target="blank">
+                                        https://commons.wikimedia.org/wiki/File:Random_forest_diagram_complete.png</a>)</span><br>
+                                <span class="cc">NOTE: This image is taken from the above source and used under the
+                                    Creative
+                                    Commons License.</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -662,6 +689,7 @@
 
 
                 <div class="container">
+                    <h5 class="sh"><b>5.1 RF Parametric Sensitivity Analysis Results: </b></h5>
                     Since the number of estimators is mandatory to mention base case considers n_estimators to be
                     100.
                     <br>N_estimators are the number of decision trees used in training the classifier
@@ -754,7 +782,21 @@
                             different conditions. Gini index evaluates the binary splits in the dataset and works with
                             the categorical target
                             variable in classification tasks.
-
+                            <br>
+                            British Statistician Ronald Fisher introduced the Iris Flower Dataset in 1936. The Iris data
+                            is a favorite example when writing about R accessors, Data Exporting, Data
+                            importing, and for different visualization techniques. Data Scientists and machine learning
+                            programmers often us this data set as an example and to test and train their first models.
+                            <br>
+                            A Decision Tree first splits the nodes on all the available variables and then selects the
+                            split which results in the most homogeneous sub-nodes.
+                            The gini index, or gini coefficient, or gini impurity computes the degree of probability of
+                            a specific variable that is wrongly being classified when chosen randomly and a variation of
+                            gini coefficient. It works on categorical variables, provides outcomes either be
+                            “successful” or “failure” and hence conducts binary splitting only.
+                            <br>
+                            The figure shows the Gini index scores at each split while building a Decision Tree model on
+                            the Iris dataset.
 
                             <br> Default parameters that are used in the base case are as follows:
                         <ul>
@@ -777,12 +819,21 @@
                         </p>
                     </div>
                     <div class="col-md-6">
+
                         <figure>
-                            <img src="https://i.postimg.cc/jdqkz3CL/DT.png" alt="DT Visualization" class="img-fluid">
-                            <figcaption class="figc"> Visualisation of Decision tree classifier <br> <span
-                                    class="img_source">(Source:
-                                    <a href="http://dx.doi.org/10.7717/peerj-cs.460" target="blank">
-                                        http://dx.doi.org/10.7717/peerj-cs.460</a>)</span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Classification_tree_on_iris_dataset.png?20200623011848"
+                                alt="Visualisation of DT classifier" class="img-fluid">
+                            <figcaption class="figc"> Visualisation of DT classifier applied on the Sci-kit learn Iris
+                                Dataset<br> <span class="img_source">(Source:<br>
+                                    1. Image: <a
+                                        href="https://commons.wikimedia.org/wiki/File:Classification_tree_on_iris_dataset.png"
+                                        target="blank">
+                                        https://commons.wikimedia.org/wiki/File:Classification_tree_on_iris_dataset.png</a>,
+                                    <br> 2. Iris Dataset: <a
+                                        href="https://archive.ics.uci.edu/ml/datasets/iris">https://archive.ics.uci.edu/ml/datasets/iris</a>)</span><br>
+                                <span class="cc">NOTE: This image is taken from the above source and used under the
+                                    Creative
+                                    Commons License.</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -791,6 +842,7 @@
 
 
                 <div class="container">
+                    <h5 class="sh"><b>6.1 DT Parametric Sensitivity Analysis Results: </b></h5>
                     Min_samples_split is the minimum number of samples required to split an internal node.Figure
                     below shows that with the increase in min_samples_split, the training accuracy and testing
                     accuracy have

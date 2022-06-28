@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'mlsafety'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F3EEED4C08F241C6B8A149E50E602F20 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_266899843E1C46ABB3BB69BE7815060A }}

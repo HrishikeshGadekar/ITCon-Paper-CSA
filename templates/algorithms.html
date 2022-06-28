@@ -238,6 +238,15 @@
                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             }
 
+            figcaption .img_source,
+            figcaption .img_source a {
+                text-decoration: none;
+                font-size: 0.85em;
+                font-style: normal;
+                font-weight: 400;
+                color: inherit;
+            }
+
             /* Media Queries */
             @media (min-width: 300px) {
                 .head-title {
@@ -335,7 +344,7 @@
             <ol class="toc-ul">
                 <li class="toc-item"><a href="#svm">Lagrangian Support Vector Machines (LSVM)</a></li>
                 <li class="toc-item"><a href="#lr">Logistic Regression (LR)</a></li>
-                <li class="toc-item"><a href="#bnb">Binomial Naive Bayes (BNB)</a></li>
+                <li class="toc-item"><a href="#bnb">Bernoulli Naive Bayes (BNB)</a></li>
                 <li class="toc-item"><a href="#mnb">Multinomial Naive Bayes (MNB)</a></li>
                 <li class="toc-item"><a href="#rf">Random Forest (RF)</a></li>
                 <li class="toc-item"><a href="#dt">Decision Trees (DT)</a></li>
@@ -375,12 +384,17 @@
                             data, which means if a dataset can be classified into two classes by using a single straight
                             line, then such data is termed as linearly separable data, and classifier is used called as
                             Linear SVM classifier.
-                        </p>l
+                        </p>
                     </div>
                     <div class="col-md-4">
                         <figure>
                             <img src="https://i.postimg.cc/VNrMdRL3/SVM.jpg" alt="SVM Hyperplanes" class="img-fluid">
-                            <figcaption class="figc"> Visualisation of LSVM classifier </figcaption>
+                            <figcaption class="figc"> Visualisation of LSVM classifier<br> <span
+                                    class="img_source">(Source:
+                                    <a href="https://www.javatpoint.com/machine-learning-support-vector-machine-algorithm"
+                                        target="blank">
+                                        https://www.javatpoint.com/machine-learning-support-vector-machine-algorithm</a>)</span>
+                            </figcaption>
                         </figure>
                     </div>
 
@@ -431,14 +445,19 @@
                         <figure>
                             <img src="https://i.postimg.cc/tJ0zXc3S/LR.png" alt="LR Sensitivity Results"
                                 class="img-fluid">
-                            <figcaption class="figc"> Visualisation of LR classifier </figcaption>
+                            <figcaption class="figc"> Visualisation of LR classifier<br> <span
+                                    class="img_source">(Source:
+                                    <a href="https://www.kaggle.com/code/colearninglounge/in-depth-model-building-and-training-with-ml-clas/notebook"
+                                        target="blank">
+                                        https://www.kaggle.com/code/colearninglounge/in-depth-model-building-and-training-with-ml-clas/notebook</a>)</span>
+                            </figcaption>
                         </figure>
                     </div>
 
                 </div>
                 <div class="container">
                     Here 'solver' is the parameter used in optimizing the results. The effect of using different solvers
-                    is shown in the Table below.
+                    is shown below.
                     <figure>
                         <img src="https://i.postimg.cc/yd3PCKZ3/LR-Sensitivity-Analysis.jpg"
                             alt="LR solver Sensitivity Results" class="img-fluid">
@@ -446,7 +465,7 @@
                     </figure>
                 </div>
                 <div class="container">
-                    'Max_iterations' did not give significant change to base parameter, as seen in the figure below.
+                    'Max_iterations' did not give significant change to base parameter, as shown below.
                     <figure>
                         <img src="https://i.postimg.cc/W4HnyzhP/LR-MI-Sensitivity-Analysis.jpgg"
                             alt="LR MI Sensitivity Results" class="img-fluid">
@@ -467,30 +486,46 @@
             <hr id="bnb">
             <!-- 3. BNB -->
             <div class="algo">
-                <h3 class="sh"><b>3. Binomial Naive Bayes (BNB)</b></h3>
-                <div>
-                    <p>
-                        It uses Bayes' theorem with a strong assumption that all the predictors are independent of
-                        each other. In simple
-                        words, the assumption is that the presence of a feature in a class is independent of any
-                        other feature in the same
-                        class.
+                <div class="row">
+                    <h3 class="sh"><b>3. Bernoulli Naive Bayes (BNB)</b></h3>
+                    <div class="col-md-6">
+                        <p>
+                            It uses Bayes' theorem with a strong assumption that all the predictors are independent of
+                            each other. In simple
+                            words, the assumption is that the presence of a feature in a class is independent of any
+                            other feature in the same
+                            class.
 
-                        <br> Default parameters that are used in the base case are as follows:
+                            <br> Default parameters that are used in the base case are as follows:
 
 
-                    <ul>
-                        <li>'alpha': 1.0</li>
-                        <li>'binarize': 0.0</li>
-                        <li>'class_prior': None</li>
-                        <li>'fit_prior': True</li>
-                    </ul>
+                        <ul>
+                            <li>'alpha': 1.0</li>
+                            <li>'binarize': 0.0</li>
+                            <li>'class_prior': None</li>
+                            <li>'fit_prior': True</li>
+                        </ul>
 
-                    </p>
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <figure>
+                            <img src="https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png"
+                                alt="LR Sensitivity Results" class="img-fluid">
+                            <figcaption class="figc"> Visualisation of BNB classifier<br> <span
+                                    class="img_source">(Source:
+                                    <a href="https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png"
+                                        target="blank">
+                                        https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png</a>)</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+
                 </div>
                 <div class="container">
-                    The following tables give both training data accuracy and testing data accuracy across all the
-                    categories.
+                    Both training data accuracy and testing data accuracy across all the
+                    categories are shown below.
                     <figure>
                         <img src="https://i.postimg.cc/9FbyS0nN/Sensitivity-analysis-Alpha-BNB.jpg"
                             alt="BNB Alpha Sensitivity Results" class="img-fluid">
@@ -521,26 +556,42 @@
             <!-- 4. MNB -->
             <div class="algo">
                 <h3 class="sh"><b>4. Multinomial Naive Bayes (MNB)</b></h3>
-                <div>
-                    <p>
-                        It is one of the Naïve Bayes classifiers in which the features are assumed to be drawn from
-                        a
-                        simple Multinomial
-                        distribution. Due to the feature of multi-class prediction, Naïve Bayes classification
-                        algorithms are well suited for
-                        text classification.
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <p>
+                            It is one of the Naïve Bayes classifiers in which the features are assumed to be drawn from
+                            a
+                            simple Multinomial
+                            distribution. Due to the feature of multi-class prediction, Naïve Bayes classification
+                            algorithms are well suited for
+                            text classification.
 
 
-                        <br> Default parameters that are used in the base case are as follows:
+                            <br> Default parameters that are used in the base case are as follows:
 
 
-                    <ul>
-                        <li>'alpha': 1.0</li>
-                        <li>'class_prior': None</li>
-                        <li>'fit_prior': True</li>
-                    </ul>
+                        <ul>
+                            <li>'alpha': 1.0</li>
+                            <li>'class_prior': None</li>
+                            <li>'fit_prior': True</li>
+                        </ul>
 
-                    </p>
+                        </p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <figure>
+                            <img src="https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png"
+                                alt="Visualisation of MNB classifier" class="img-fluid">
+                            <figcaption class="figc"> Visualisation of MNB classifier<br> <span
+                                    class="img_source">(Source:
+                                    <a href="https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png"
+                                        target="blank">
+                                        https://blog.datumbox.com/wp-content/uploads/2013/09/bayesian_freshbiostats.png</a>)</span>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
                 <div class="container">
                     From the results of the analysis shown below, the alpha value is changed to "0.2".
@@ -595,9 +646,15 @@
                         </p>
                     </div>
                     <div class="col-md-6">
+
                         <figure>
-                            <img src="RF.jpg" alt="RF Visualization" class="img-fluid">
-                            <figcaption class="figc"> Visualisation of Random forest classifier </figcaption>
+                            <img src="https://www.researchgate.net/profile/Mohammad-Uddin-42/publication/334232648/figure/fig2/AS:803642831560706@1568614790960/Working-principle-of-random-forest-classifierC.ppm"
+                                alt="RF Visualization" class="img-fluid">
+                            <figcaption class="figc"> Visualisation of Random forest classifier <br> <span
+                                    class="img_source">(Source:
+                                    <a href="https://doi.org/10.1007/978-981-13-7564-4_36" target="blank">
+                                        https://doi.org/10.1007/978-981-13-7564-4_36</a>)</span>
+                            </figcaption>
                         </figure>
                     </div>
 
@@ -722,7 +779,11 @@
                     <div class="col-md-6">
                         <figure>
                             <img src="https://i.postimg.cc/jdqkz3CL/DT.png" alt="DT Visualization" class="img-fluid">
-                            <figcaption class="figc"> Visualisation of Decision tree classifier </figcaption>
+                            <figcaption class="figc"> Visualisation of Decision tree classifier <br> <span
+                                    class="img_source">(Source:
+                                    <a href="http://dx.doi.org/10.7717/peerj-cs.460" target="blank">
+                                        http://dx.doi.org/10.7717/peerj-cs.460</a>)</span>
+                            </figcaption>
                         </figure>
                     </div>
                 </div>
@@ -904,9 +965,9 @@
 
             <h4 class="sh toc">Summary</h4>
 
-            The following table summarizes the values of hyperparameters used for various classifiers implemented in
+            The values of hyperparameters used for various classifiers implemented in
             this
-            study.
+            study are summarized below.
             <div class="container">
                 <figure>
                     <img src="https://i.postimg.cc/3JTZVPJW/Information-on-various-classifiers-used-in-the-current-study.jpg"
